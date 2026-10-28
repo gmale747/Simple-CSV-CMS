@@ -1,0 +1,15 @@
+# PR gate: runs the central standards check on every pull request.
+# The logic lives in the central repo so every app is checked the same way.
+name: Standards check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write   # lets the check post its report as a PR comment
+
+jobs:
+  standards:
+    uses: gmale747/tech-standards/.github/workflows/standards-check.yml@main

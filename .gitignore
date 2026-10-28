@@ -1,0 +1,4 @@
+node_modules/
+.standards-cache/
+compliance-report.*
+.DS_Store

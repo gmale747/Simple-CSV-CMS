@@ -1,0 +1,14 @@
+{
+  "name": "simple-csv-cms",
+  "version": "1.0.0",
+  "description": "Simple CSV-driven blog CMS used to test the standards compliance pipeline.",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.3",
+    "papaparse": "5.4.1"
+  }
+}

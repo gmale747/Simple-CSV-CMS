@@ -1,0 +1,46 @@
+# Application record (the "CMDB entry" for this repo).
+# Schema: https://github.com/gmale747/tech-standards/blob/main/schemas/app-record.schema.md
+schema_version: 1
+app:
+  id: simple-csv-cms
+  name: Road Construction Help Center
+  description: >
+    Public-facing help articles about road construction, work zones,
+    detours, and permits. Content is stored in a CSV file.
+  ownership:
+    department: Transportation Systems
+    team: Public Information Web
+    owner: Jane Doe
+    escalation_contact: jane.doe@example.gov
+  access:
+    visibility: public            # public | internal | restricted
+    data_classification: public   # public | not-public | private | confidential
+    roles_allowed:
+      - developer
+      - content-editor
+  metadata:
+    version: 1.0.0
+    lifecycle: development        # development | production | retiring | retired
+    last_updated: 2026-10-22
+    tags: [web, static, csv, public-info]
+  repositories:
+    primary_repo: https://github.com/gmale747/Simple-CSV-CMS
+  environments:
+    dev:
+      url: http://localhost:8080
+      hosting: local
+    prod:
+      url: https://gmale747.github.io/Simple-CSV-CMS/
+      hosting: github-pages
+  documentation:
+    readme: README.md
+    runbook: docs/runbook.md
+    security: SECURITY.md
+  automation:
+    allow_auto_updates: true
+    auto_update_fields:
+      - metadata.version
+      - metadata.last_updated
+      - metadata.tags
+      - environments.dev.url
+      - environments.prod.url
