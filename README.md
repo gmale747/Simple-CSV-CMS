@@ -1,6 +1,6 @@
 # Road Construction Help Center (Simple-CSV-CMS)
 
-A deliberately simple blog CMS used for testing of (central YAML manifest + GitHub Copilot skill + PR enforcement + audits).
+A deliberately simple blog CMS used for testing of (central YAML manifest + GitHub Copilot skill + PR enforcement + audits). It is essentially a nice little blog that uses a CSV files instead of a database. (The CSV file is the "Admin" area for managing the whole CMS / blog content, just update the ten columns and re-upload to your host.)
 
 - HTML5 + Bootstrap 5.3.3 + a little JavaScript (PapaParse 5.4.1 for CSV parsing)
 - `data/posts.csv` is the database: `post-name, post-category, post-header, post-body, post-main-image, post-url`
